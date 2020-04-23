@@ -11,23 +11,23 @@ const QuestionView = ({
   ...props
 }) => {
 
-  const [ready, setReady] = React.useState<boolean>(false);
+  const [ready, setReady] = React.useState<boolean>();
 
   const [questions, setQuestions] = React.useState<IQuestion[]>([]);
   const [index, setIndex] = React.useState<number>(0);
-
-  const [cooldownTime, setCooldownTime] = React.useState<number>(Number.NaN);
-  const [cooldownTimer, setCooldownTimer] = React.useState<any>();
 
   const [time, setTime] = React.useState<number>(Number.NaN);
   const [timer, setTimer] = React.useState<any>();
 
 
   React.useEffect(() => {
+    setReady(false)
     axios.get('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
       .then((response) => {
         if (response && response.data) {
           setQuestions((response.data.results as IQuestion[]))
+          setReady(true);
+          handleFetchSpecificQuestion(0);
         }
       })
       .catch((error) => {
@@ -40,32 +40,9 @@ const QuestionView = ({
   }, [])
 
   React.useEffect(() => {
-    if (questions.length > 0 ) {
-      setCooldownTime(3)
-      setCooldownTimer(
-        setInterval(() => {
-            setCooldownTime((_cooldownTime: number) => (
-              _cooldownTime - 1
-            ))
-          },  
-          1000
-        )
-      )
-    }
-  }, [questions])
-
-  React.useEffect(() => {
-    if (cooldownTime === 0) {
-      clearInterval(cooldownTimer)
-      handleFetchSpecificQuestion(0)
-      setReady(true)
-    }
-  }, [cooldownTime])
-
-  React.useEffect(() => {
     if (time === 0) {
       clearInterval(timer)
-      // alert('Oyun bitti')
+      alert('Oyun bitti')
       // // handleFetchSpecificQuestion(0)
     }
   }, [time])
@@ -90,25 +67,17 @@ const QuestionView = ({
     <div className="questions">
       <aside>
         <div className="m-auto">
-          
+          {time || ''}
         </div>
       </aside>
       <div className="content">
         {!ready ? (
           <Modal>
-            {questions.length === 0 ? (
-              <div className="w-full h-full flex">
-                <div className="m-auto">
-                  Sorular Hazırlanıyor
-                </div>
+            <div className="w-full h-full flex">
+              <div className="m-auto">
+                Sorular Hazırlanıyor
               </div>
-            ) : (
-              <div className="w-full h-full flex">
-                <div className="m-auto">
-                  {cooldownTime || ''}
-                </div>
-              </div>
-            )}
+            </div>
             
           </Modal>
         ) : (
