@@ -1,0 +1,23 @@
+.button {
+  background-color: #443BCE;
+  margin: 0px;
+  border: none;
+  color: white;
+  transition: .3s;
+  transform: scale(.95);
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1);
+  }
+
+  &:active {
+    background-color: rgb(31, 22, 161);
+    transform: scale(.95);
+  }
+
+  &:before {
+    content: none;
+
+  }
+}
