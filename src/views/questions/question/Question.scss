@@ -1,0 +1,29 @@
+$breakpoint-tablet: 768px;
+
+.question {
+  width: 100%;
+  font-size: x-large;
+
+  .question-area {
+    word-break: break-all;
+  }
+
+  .answers-area {
+    margin-top: 50px;
+  }
+
+  .answer-button{
+    width: 50%;
+    height: 50px;
+    float: left;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .answer-button{
+      width: 100%;
+    }
+  }
+
+  
+}

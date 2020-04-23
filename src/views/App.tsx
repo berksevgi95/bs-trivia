@@ -8,7 +8,8 @@ import {
 } from "react-router-dom";
 
 import WelcomeView from './welcome/WelcomeView';
-import QuestionView from './question/QuestionView';
+import QuestionsView from './questions/QuestionsView';
+import ResultView from './result/ResultView';
 
 import './App.scss';
 
@@ -22,7 +23,10 @@ const App = () => {
             <WelcomeView />
           </Route>
           <Route path="/questions">
-            <QuestionView />
+            <QuestionsView />
+          </Route>
+          <Route path="/result">
+            <ResultView />
           </Route>
           <Route exact path="/">
             <Redirect to="/welcome" />

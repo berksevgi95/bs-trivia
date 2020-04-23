@@ -4,8 +4,8 @@ import './Button.scss';
 
 const Button = (props: any) => (
   <button
-    className={`button ${props.className || ''}`}
     {...props}
+    className={`button ${props.className || ''}`}
   >
     {props.children}
   </button>
