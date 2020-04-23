@@ -1,10 +1,5 @@
-enum EDifficulty {
-  EASY = "easy"
-}
-
-enum ECategory {
-  GENERAL_KNOWLEDGE = "General Knowledge"
-}
+import { EDifficulty } from "./EDifficulty";
+import { ECategory } from "./ECategory";
 
 export interface IQuestion {
   difficulty: EDifficulty,

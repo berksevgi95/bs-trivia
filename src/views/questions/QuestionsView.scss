@@ -12,7 +12,6 @@ $breakpoint-tablet: 768px;
     display: flex;
 
     .panel {
-      margin: auto;
       width: 100%;
       color:white;
       margin-left: 10%;
@@ -23,24 +22,36 @@ $breakpoint-tablet: 768px;
       .info {
         margin-top: 10px;
         margin-bottom: 10px;
-
-        & > div {
-          font-size: 60px
-        }
       }
 
       .action {
         margin-top: 10px;
         background-color: transparent;
         border: 2px white solid;
+
+        &:before {
+          border: none;
+        }
       }
     }
   }
 
   .content {
+    position: relative;
     width: 60%;
     height: 100%;
     overflow: auto;
+
+    img {
+      position: absolute;
+      width: 100%;
+      transform: rotateZ(180deg);
+      bottom: 0px;
+      left: -200px;
+      z-index: -1;
+      opacity: 0.05;
+      filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+    }
 
     .container {
       margin: auto;
@@ -62,14 +73,10 @@ $breakpoint-tablet: 768px;
         
         .info {
           margin: 0px;
-
-          & > div {
-            font-size: 30px
-          }
         }
 
         .action {
-          height: 30px;
+          height: 35px;
           margin-top: 5px;
         }
       }

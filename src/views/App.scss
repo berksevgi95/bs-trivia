@@ -1,16 +1,21 @@
 
-  @keyframes fadein {
-    from {
-      opacity: 0;
-      transform: scale(.9);
-    }
-  
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+$breakpoint-tablet: 768px;
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(.9);
   }
 
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fadein {
+  animation: fadein .25s;
+}
 
 .app {
   width: 100%;
@@ -32,4 +37,50 @@
 
 .m-auto {
   margin: auto;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 60px;
+  font-weight: normal;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 40px;
+  }
+}
+
+
+h2 {
+  margin: 0px;
+  font-size: 40px;
+  font-weight: normal;
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 30px;
+  }
+}
+
+
+h3 {
+  margin: 0px;
+  font-size: 30px;
+  font-weight: normal;
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 20px;
+  }
 }

@@ -1,19 +1,17 @@
 import React from 'react';
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
-
 import WelcomeView from './welcome/WelcomeView';
 import QuestionsView from './questions/QuestionsView';
 import ResultView from './result/ResultView';
 
 import './App.scss';
 
-const App = () => {
+const App: React.FC<{}> = () => {
   return (
     <div className="app">
 

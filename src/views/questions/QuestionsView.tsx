@@ -12,6 +12,7 @@ import * as _false from '../../assets/lotties/false.json';
 import * as _timesup from '../../assets/lotties/timesup.json';
 import * as _error from '../../assets/lotties/error.json';
 import { withRouter } from 'react-router-dom';
+import Background from '../../assets/img/background.png'
 
 const TIME = 15;
 
@@ -35,15 +36,14 @@ const QuestionView = ({
   const questionRef = React.useRef<any>();
 
   const [ready, setReady] = React.useState<EReadyState>(EReadyState.NOT_READY);
-
   const [questions, setQuestions] = React.useState<IQuestion[]>([]);
   const [index, setIndex] = React.useState<number>(Number.NaN);
-
   const [time, setTime] = React.useState<number>(Number.NaN);
   const [timer, setTimer] = React.useState<any>();
-
   const [points, setPoints] = React.useState<number>(0);
+  const [correctCount, setCorrectCount] = React.useState<number>(0);
   const [viewState, setViewState] = React.useState<EViewState>(EViewState.QUESTION_VIEW)
+  const [jokerUsed, setJokerUsed] = React.useState<boolean>(false);
 
   const errorLottie = (_error as any).default;
 
@@ -68,7 +68,7 @@ const QuestionView = ({
           setReady(EReadyState.READY);
         }
       })
-      .catch((error) => {
+      .catch(() => {
         setReady(EReadyState.ERROR);
       })
   }
@@ -92,18 +92,32 @@ const QuestionView = ({
   const handleJoker = () => {
     if (questionRef.current) {
       questionRef.current.joker()
+      setJokerUsed(true);
     }
   }
 
   const handleCorrectAnswer = () => {
     clearInterval(timer)
     setPoints(points + (time * 100))
+    setCorrectCount(correctCount + 1);
     setViewState(EViewState.CORRECT_VIEW);
   }
 
   const handleContinue = () => {
-    setViewState(EViewState.QUESTION_VIEW)
-    handleFetchSpecificQuestion(index + 1)
+    if (index === questions.length - 1) {
+      props.history.push({
+        pathname: '/result',
+        state: {
+          points,
+          correctCount,
+          questionCount: questions.length,
+        }
+      })
+    } else {
+      setViewState(EViewState.QUESTION_VIEW)
+      handleFetchSpecificQuestion(index + 1)
+    }
+    
   }
 
 
@@ -113,7 +127,6 @@ const QuestionView = ({
   }
 
   const handleRedirectWelcomePage = () => {
-    // console.log(props.)
     props.history.push('/welcome')
   }
 
@@ -122,7 +135,7 @@ const QuestionView = ({
     if (viewState === EViewState.CORRECT_VIEW) {
       const correctLottie = (_correct as any).default;
       return (
-        <div className="w-full">
+        <div className="w-50 h-50 m-auto fadein">
           <Lottie
             options={{
               loop: false,
@@ -133,8 +146,20 @@ const QuestionView = ({
             }}
             isClickToPauseDisabled
           />
-          <div className="w-full">
-            correct Answer
+          <div className="w-full flex mb-15">
+            <h3 className="m-auto">
+              Correct Answer!
+            </h3>
+          </div>
+          <div className="w-full flex">
+            <div className="m-auto">
+              {`You have earned ${time * 100} points`}
+            </div>
+          </div>
+          <div className="w-full flex mb-15">
+            <div className="m-auto">
+              {`Total: ${points} points`} 
+            </div>
           </div>
           <div className="w-full">
             <Button
@@ -149,7 +174,7 @@ const QuestionView = ({
     } else if (viewState === EViewState.FALSE_VIEW) {
       const falseLottie = (_false as any).default;
       return (
-        <div className="w-full">
+        <div className="w-50 h-50 m-auto fadein">
           <Lottie
             options={{
               loop: false,
@@ -160,8 +185,10 @@ const QuestionView = ({
             }}
             isClickToPauseDisabled
           />
-          <div className="w-full">
-            Wrong Answer
+          <div className="w-full flex mb-15">
+            <h3 className="m-auto">
+              False Answer
+            </h3>
           </div>
           <div className="w-full">
             <Button
@@ -176,7 +203,7 @@ const QuestionView = ({
     } else if (viewState === EViewState.TIMESUP_VIEW) {
       const timesupLottie = (_timesup as any).default;
       return (
-        <div className="w-full">
+        <div className="w-50 h-50 m-auto fadein">
           <Lottie
             options={{
               loop: false,
@@ -187,8 +214,10 @@ const QuestionView = ({
             }}
             isClickToPauseDisabled
           />
-          <div className="w-full">
-            Time's up
+          <div className="w-full flex mb-15">
+            <h3 className="m-auto">
+              Time's up
+            </h3>
           </div>
           <div className="w-full">
             <Button
@@ -203,6 +232,7 @@ const QuestionView = ({
     } else {
       return (
         <Question
+          className="fadein"
           ref={questionRef}
           questionObj={questions[index]}
           onCorrectAnswer={handleCorrectAnswer}
@@ -217,31 +247,31 @@ const QuestionView = ({
     <div className="questions">
       <aside>
         {ready === EReadyState.READY && (
-          <div className="panel">
+          <div className="panel fadein m-auto">
             <div className="info">
               Points
-              <div>
+              <h2>
                 {points}
-              </div>
+              </h2>
             </div>
             <div className="info">
               Time
-              <div>
+              <h2>
                 {time}
-              </div>
+              </h2>
             </div>
             <div className="info">
               Question
-              <div>
+              <h2>
                 {`${index + 1}/${questions.length}`}
-              </div>
+              </h2>
             </div>
             <div className="info">
               Joker
               <div className="flex">
                 <Button
                   className="action"
-                  disabled={viewState !== EViewState.QUESTION_VIEW}
+                  disabled={viewState !== EViewState.QUESTION_VIEW || jokerUsed}
                   onClick={handleJoker}
                 >
                   50 : 50
@@ -252,12 +282,13 @@ const QuestionView = ({
         )}
       </aside>
       <div className="content">
+        <img src={Background} alt=""/>
         {ready === EReadyState.NOT_READY && (
           <Modal>
             <div className="w-full h-full flex">
-              <div className="m-auto">
-                Sorular Hazırlanıyor
-              </div>
+              <h3 className="m-auto text-center">
+                Questions are being preapered
+              </h3>
             </div>
           </Modal>
         )}
@@ -278,7 +309,9 @@ const QuestionView = ({
                   isClickToPauseDisabled
                 />
                 <div className="w-full">
-                  Time's up
+                  <div className="text-center mb-15">
+                    Connection couldn't established
+                  </div>
                 </div>
                 <div className="w-full">
                   <Button

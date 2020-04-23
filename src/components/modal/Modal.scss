@@ -16,6 +16,40 @@
     height: 50%;
     max-height: 300px;
     max-width: 400px;
-    animation: fadein .25s;
+    position: relative;
+
+    .tri-decoration1 {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 0;
+      height: 0;
+      border-bottom: 50px solid rgb(31, 22, 161);
+      border-right: 50px solid transparent;
+    }
+
+    .tr2-decoration1 {
+      position: absolute;
+      bottom: 0px;
+      left: 25px;
+      width: 0;
+      height: 0;
+      border-bottom: 25px solid #4CDAF4;
+      border-left: 25px solid transparent;
+      z-index: 2;
+    }
+
+    .tr3-decoration1 {
+      position: absolute;
+      bottom: 0px;
+      left: 40px;
+      width: 0;
+      height: 0;
+      border-bottom: 30px solid rgba(128, 128, 128, 0.288);
+      border-right: 30px solid transparent;
+      z-index: 1;
+    }
+
+    
   }
 }

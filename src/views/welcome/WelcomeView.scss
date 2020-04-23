@@ -6,11 +6,14 @@
   display: flex;
 
   .content{
+    width: 75%;
+    height: 75%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .description {
-    font-size: xx-large;
     width: 100%;
     text-align: center;
     opacity: 0;
@@ -19,12 +22,13 @@
   }
 
   .button-container {
-    width: 100%;
     opacity: 0;
     animation: fadein .5s ease-in-out 3s forwards;
+    display: flex;
 
     .button {
-      width: 100%;
+      width: 50%;
+      margin: auto;
     }
     
   }

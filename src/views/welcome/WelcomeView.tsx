@@ -21,7 +21,8 @@ const WelcomeView = ({
   return (
     <div className="welcome">
       <div className="content">
-        <Lottie options={{
+        <Lottie
+          options={{
             loop: false,
             animationData: welcomeLottie,
             rendererSettings: {
@@ -29,12 +30,12 @@ const WelcomeView = ({
             }
           }}
           isClickToPauseDisabled
-          height={400}
-          width={400}
+          // height={400}
+          // width={400}
         />
-        <div className="description">
+        <h2 className="description">
           Yet Another Trivia Game by BS
-        </div>
+        </h2>
         <div className="button-container">
           <Button className="button" onClick={handleRedirectQuestions}>
             Get Started

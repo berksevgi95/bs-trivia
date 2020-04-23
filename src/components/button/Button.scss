@@ -20,7 +20,15 @@
   }
 
   &:before {
-    content: none;
+    width: 0;
+    height: 0;
+    border-top: 50px solid rgb(31, 22, 161);
+    border-right: 25px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    z-index: 1000;
   }
 
   &:disabled {

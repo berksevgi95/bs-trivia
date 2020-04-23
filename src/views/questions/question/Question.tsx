@@ -6,6 +6,7 @@ import Button from '../../../components/button/Button';
 import shuffle from '../../../utils/shuffle';
 
 export interface IQuestionProps {
+  className?: string,
   ref?: React.RefObject<unknown>,
   questionObj: IQuestion,
   onCorrectAnswer: () => void,
@@ -43,10 +44,13 @@ const Question: React.FC<IQuestionProps> = React.forwardRef(({
   }
 
   return (
-    <div className="question">
-      <div className="question-area">
+    <div className={`question ${props.className || ''}`}>
+      {/* <div className="question-area">
         {new DOMParser().parseFromString(questionObj.question, 'text/html').body.textContent}
-      </div>
+      </div> */}
+      <h2>
+        {new DOMParser().parseFromString(questionObj.question, 'text/html').body.textContent}
+      </h2>
       <div className="answers-area">
         {answers
           .map((question) => (

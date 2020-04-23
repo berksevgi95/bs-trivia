@@ -8834,6 +8834,11 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-absolute-selector@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-absolute-selector/-/react-absolute-selector-1.0.1.tgz#a2379fc4dc601d5e942840ae75d619cb285497da"
+  integrity sha512-gA0269J0dN7fO6NLeXMf1yMLhNQvQAXtZUfFk5k5GbckdUVRoxsCamTQRW8+D4Plry5IUOC7T1xaxv6Qvp/MrQ==
+
 react-app-polyfill@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-1.0.6.tgz#890f8d7f2842ce6073f030b117de9130a5f385f0"
