@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import * as welcome from '../../assets/lotties/welcome.json';
+import * as _welcome from '../../assets/lotties/welcome.json';
 
 import './WelcomeView.scss';
 import Button from '../../components/button/Button';
@@ -10,7 +10,7 @@ const WelcomeView = ({
   ...props
 }) => {
 
-  const welcomeLottie = (welcome as any).default;
+  const welcomeLottie = (_welcome as any).default;
 
   const handleRedirectQuestions = () => {
     if (props.history) {
