@@ -5,6 +5,11 @@ $breakpoint-tablet: 768px;
   height: 100%;
   display: flex;
 
+
+  .absolute-selector {
+    background: #443BCE !important;
+  }
+
   aside {
     width: 40%;
     height: 100%;

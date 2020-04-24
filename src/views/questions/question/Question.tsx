@@ -45,9 +45,6 @@ const Question: React.FC<IQuestionProps> = React.forwardRef(({
 
   return (
     <div className={`question ${props.className || ''}`}>
-      {/* <div className="question-area">
-        {new DOMParser().parseFromString(questionObj.question, 'text/html').body.textContent}
-      </div> */}
       <h2>
         {new DOMParser().parseFromString(questionObj.question, 'text/html').body.textContent}
       </h2>

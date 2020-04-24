@@ -1,0 +1,67 @@
+.bs-select {
+    position: relative;
+    width: min-content;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: .3s;
+    background-color: #443BCE;
+    border: 1px solid white;
+
+    &:hover {
+        cursor: pointer;
+        // background-color: rgb(31, 22, 161);
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+
+    .bs-options {
+        animation: fadein .25s;
+        z-index: 1;
+        position: absolute;
+        color: black;
+        top: 35px;
+        left: -1px;
+        max-height: 200px;
+        background-color: #443BCE;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        border: 1px solid white;
+
+    }
+
+    .bs-option {
+        padding: 5px 10px 5px 10px;
+        list-style: none;
+        color: white;
+        &:hover {
+            background-color: rgb(31, 22, 161);
+        }
+    }
+}
+
+
+.bs-select-secondary {
+    background-color: #51beb3;
+    color: white;
+
+    &:hover {
+        background: #429990;
+    }
+
+    .bs-options {
+        color: white;
+        background-color: #51beb3;
+    }
+
+    .bs-option {
+        padding: 5px 10px 5px 10px;
+        &:hover {
+            background: #429990;
+        }
+    }
+}

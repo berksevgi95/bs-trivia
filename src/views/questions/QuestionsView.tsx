@@ -11,8 +11,18 @@ import * as _correct from '../../assets/lotties/correct.json';
 import * as _false from '../../assets/lotties/false.json';
 import * as _timesup from '../../assets/lotties/timesup.json';
 import * as _error from '../../assets/lotties/error.json';
+import * as _sad from '../../assets/lotties/sad.json';
 import { withRouter } from 'react-router-dom';
 import Background from '../../assets/img/background.png'
+
+// TODO
+// @ts-ignore
+import {AbsoluteSelector} from 'react-absolute-selector'
+import 'react-absolute-selector/build/index.css';
+import Select from '../../components/select/Select';
+import { EDifficulty } from '../../models/EDifficulty';
+import Radiobutton from '../../components/radiobutton/Radiobutton';
+import { ECategory, categoryKeyValues } from '../../models/ECategory';
 
 const TIME = 15;
 
@@ -27,6 +37,7 @@ enum EReadyState {
   NOT_READY,
   ERROR,
   READY,
+  NOT_EXIST
 }
 
 const QuestionView = ({
@@ -44,11 +55,14 @@ const QuestionView = ({
   const [correctCount, setCorrectCount] = React.useState<number>(0);
   const [viewState, setViewState] = React.useState<EViewState>(EViewState.QUESTION_VIEW)
   const [jokerUsed, setJokerUsed] = React.useState<boolean>(false);
-
+  const [difficulty, setDifficulty] = React.useState<EDifficulty>(EDifficulty.EASY);
+  const [category, setCategory] = React.useState<ECategory>(ECategory.GENERAL_KNOWLEDGE);
+  
   const errorLottie = (_error as any).default;
+  const sadLottie = (_sad as any).default;
 
   React.useEffect(() => {
-    initialize();
+    initialize(difficulty, category);
   }, [])
 
   React.useEffect(() => {
@@ -58,14 +72,18 @@ const QuestionView = ({
     }
   }, [time])
 
-  const initialize = () => {
+  const initialize = (_difficulty: EDifficulty, _category: ECategory) => {
+    setViewState(EViewState.QUESTION_VIEW)
     setReady(EReadyState.NOT_READY)
-    axios.get('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
+    setQuestions([]);
+    axios.get(`https://opentdb.com/api.php?amount=10&category=${_category}&difficulty=${_difficulty}&type=multiple`)
       .then((response) => {
-        if (response && response.data) {
+        if (response && response.data && response.data.results && response.data.results.length > 0) {
           setQuestions((response.data.results as IQuestion[]))
           handleFetchSpecificQuestion(0);
           setReady(EReadyState.READY);
+        } else {
+          setReady(EReadyState.NOT_EXIST)
         }
       })
       .catch(() => {
@@ -74,8 +92,7 @@ const QuestionView = ({
   }
 
   const handleFetchSpecificQuestion = (index: number) => {
-    if (timer)
-      clearInterval(timer)
+    clearInterval(timer);
     setIndex(index);
     setTime(TIME)
     setTimer(
@@ -242,9 +259,63 @@ const QuestionView = ({
     }
   }
 
+  const handleChangeDifficulty = (option: {
+    label: string,
+    value: EDifficulty
+  }) => {
+    setDifficulty(option.value)
+    initialize(option.value, category)
+  }
+
+  const handleChangeCategory = (value: ECategory) => {
+    setCategory(value);
+    initialize(difficulty, value)
+  }
 
   return (
     <div className="questions">
+      <AbsoluteSelector
+        title="Options"
+      >
+        <div className="m-10">
+          <div className="w-full mb-10">
+            Difficulty
+          </div>
+          <div className="w-full mb-10">
+            <Select
+              className="w-full"
+              options={[{
+                label: 'Easy',
+                value: EDifficulty.EASY
+              }, {
+                label: 'Medium',
+                value: EDifficulty.MEDIUM
+              }, {
+                label: 'Hard',
+                value: EDifficulty.HARD
+              }]}
+              onClick={handleChangeDifficulty}
+              value={difficulty}
+            />
+          </div>
+          <div className="w-full mb-10">
+            Category
+          </div>
+          <div className="w-full mb-10">
+            {categoryKeyValues.map((keyValue) => (
+              <Radiobutton 
+                key={keyValue.value}
+                label={keyValue.label}
+                onChange={handleChangeCategory}
+                value={keyValue.value}
+                checked={category === keyValue.value}
+              />
+            ))}
+          </div>
+        </div>
+        
+        
+      </AbsoluteSelector>
       <aside>
         {ready === EReadyState.READY && (
           <div className="panel fadein m-auto">
@@ -311,6 +382,40 @@ const QuestionView = ({
                 <div className="w-full">
                   <div className="text-center mb-15">
                     Connection couldn't established
+                  </div>
+                </div>
+                <div className="w-full">
+                  <Button
+                    className="w-full"
+                    onClick={initialize}
+                  >
+                    Try Again
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Modal>
+        )}
+        {ready === EReadyState.NOT_EXIST && (
+          <Modal>
+            <div className="w-full h-full flex">
+              <div className="m-auto">
+                <Lottie 
+                  options={{
+                    autoplay: true,
+                    loop: true,
+                    animationData: sadLottie,
+                    rendererSettings: {
+                      preserveAspectRatio: 'xMidYMid slice'
+                    }
+                  }}
+                  width={100}
+                  height={100}
+                  isClickToPauseDisabled
+                />
+                <div className="w-full">
+                  <div className="text-center mb-15">
+                    Cannot find any question
                   </div>
                 </div>
                 <div className="w-full">
