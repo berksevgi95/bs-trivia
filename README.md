@@ -1,10 +1,10 @@
 # BS Trivia
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5236bbb6-5439-4ffa-8c8f-62996823c0d9/deploy-status)](https://app.netlify.com/sites/priceless-poincare-e3ed14/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d1b91217-8d5b-4efc-a5e6-a613e9a8aec2/deploy-status)](https://app.netlify.com/sites/lucid-beaver-b58311/deploys)
 
 Yet another simple trivia game made by [BS](https://berksevgi95.github.io/me/) and bootstrapped by [Create React App](https://github.com/facebook/create-react-app).
 
-[Click](https://priceless-poincare-e3ed14.netlify.app/) to check demo
+[Click](https://lucid-beaver-b58311.netlify.app) to check demo
 
 ## Get Started
 
