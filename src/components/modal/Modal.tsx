@@ -2,9 +2,7 @@ import React from 'react';
 
 import './Modal.scss';
 
-const Modal = ({
-  ...props
-}) => {
+const Modal: React.FC<{}> = (props) => {
   return (
     <div className="modal">
       <div className="panel fadein">

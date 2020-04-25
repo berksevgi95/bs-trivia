@@ -12,7 +12,7 @@ import * as _false from '../../assets/lotties/false.json';
 import * as _timesup from '../../assets/lotties/timesup.json';
 import * as _error from '../../assets/lotties/error.json';
 import * as _sad from '../../assets/lotties/sad.json';
-import { withRouter } from 'react-router-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import Background from '../../assets/img/background.png'
 
 // TODO
@@ -40,7 +40,12 @@ enum EReadyState {
   NOT_EXIST
 }
 
-const QuestionView = ({
+export interface IQuestionsViewProps extends RouteComponentProps {
+  url?: string
+}
+
+const QuestionView: React.FC<IQuestionsViewProps> = ({
+  url,
   ...props
 }) => {
 
@@ -76,7 +81,7 @@ const QuestionView = ({
     setViewState(EViewState.QUESTION_VIEW)
     setReady(EReadyState.NOT_READY)
     setQuestions([]);
-    axios.get(`https://opentdb.com/api.php?amount=10&category=${_category}&difficulty=${_difficulty}&type=multiple`)
+    axios.get(url || `https://opentdb.com/api.php?amount=10&category=${_category}&difficulty=${_difficulty}&type=multiple`)
       .then((response) => {
         if (response && response.data && response.data.results && response.data.results.length > 0) {
           setQuestions((response.data.results as IQuestion[]))
@@ -272,6 +277,10 @@ const QuestionView = ({
     initialize(difficulty, value)
   }
 
+  const handleTryAgain = () => {
+    initialize(difficulty, category)
+  }
+
   return (
     <div className="questions">
       <AbsoluteSelector
@@ -387,7 +396,7 @@ const QuestionView = ({
                 <div className="w-full">
                   <Button
                     className="w-full"
-                    onClick={initialize}
+                    onClick={handleTryAgain}
                   >
                     Try Again
                   </Button>
@@ -421,7 +430,7 @@ const QuestionView = ({
                 <div className="w-full">
                   <Button
                     className="w-full"
-                    onClick={initialize}
+                    onClick={handleTryAgain}
                   >
                     Try Again
                   </Button>

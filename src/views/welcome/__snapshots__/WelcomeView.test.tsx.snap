@@ -1,0 +1,1028 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders and matches its snapshots without any crash 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="welcome"
+      >
+        <div
+          class="content"
+        >
+          <div
+            aria-label="animation"
+            role="button"
+            style="width: 100%; height: 100%; overflow: hidden; margin: 0px auto; outline: none;"
+            tabindex="0"
+            title=""
+          >
+            <svg
+              height="3112"
+              preserveAspectRatio="xMidYMid slice"
+              style="width: 100%; height: 100%; transform: translate3d(0,0,0);"
+              viewBox="0 0 4096 3112"
+              width="4096"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <clippath
+                  id="__lottie_element_2"
+                >
+                  <rect
+                    height="3112"
+                    width="4096"
+                    x="0"
+                    y="0"
+                  />
+                </clippath>
+                <clippath
+                  id="__lottie_element_4"
+                >
+                  <path
+                    d="M0,0 L4096,0 L4096,3112 L0,3112z"
+                  />
+                </clippath>
+                <clippath
+                  id="__lottie_element_11"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    d=" M300.3399963378906,-1.684000015258789 C300.3399963378906,-1.684000015258789 -2.6600000858306885,-1.684000015258789 -2.6600000858306885,-1.684000015258789 C-2.6600000858306885,-1.684000015258789 -2.6600000858306885,300.3160095214844 -2.6600000858306885,300.3160095214844 C-2.6600000858306885,300.3160095214844 300.3399963378906,300.3160095214844 300.3399963378906,300.3160095214844 C300.3399963378906,300.3160095214844 300.3399963378906,-1.684000015258789 300.3399963378906,-1.684000015258789"
+                    fill="#ffffff"
+                    fill-opacity="1"
+                  />
+                </clippath>
+                <mask
+                  id="__lottie_element_14"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_17"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                  <path
+                    clip-rule="nonzero"
+                    fill="#000000"
+                  />
+                </mask>
+                <clippath
+                  id="__lottie_element_23"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </clippath>
+                <mask
+                  id="__lottie_element_26"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_29"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_32"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_35"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_38"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_41"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_44"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_47"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_50"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_53"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_56"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_59"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_62"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_65"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_68"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+                <mask
+                  id="__lottie_element_71"
+                >
+                  <path
+                    clip-rule="nonzero"
+                    fill="#ffffff"
+                  />
+                </mask>
+              </defs>
+              <g
+                clip-path="url(#__lottie_element_2)"
+              >
+                <g
+                  clip-path="url(#__lottie_element_4)"
+                  opacity="1"
+                  style="display: block;"
+                  transform="matrix(1,0,0,1,0,0)"
+                >
+                  <g
+                    opacity="1"
+                    style="display: block;"
+                    transform="matrix(1,0,0,1,2048,1556)"
+                  >
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,0,0)"
+                    >
+                      <path
+                        d=" M2048,-1556 C2048,-1556 2048,1556 2048,1556 C2048,1556 -2048,1556 -2048,1556 C-2048,1556 -2048,-1556 -2048,-1556 C-2048,-1556 2048,-1556 2048,-1556z"
+                        fill="rgb(255,255,255)"
+                        fill-opacity="1"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_71)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_68)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_65)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_62)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_59)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_56)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_53)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_50)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_47)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_44)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_41)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_38)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_35)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_32)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_29)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_26)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    aria-label="WELCOME"
+                    clip-path="url(#__lottie_element_23)"
+                    fill="rgb(17,17,17)"
+                    font-family="Poppins"
+                    font-size="254"
+                    font-style="normal"
+                    font-weight="normal"
+                    style="display: none;"
+                  >
+                    <path
+                      d=" M4.65,-182.19 C4.65,-182.19 52.28,0 52.28,0 C52.28,0 78.2,0 78.2,0 C78.2,0 120.49,-151.06 120.49,-151.06 C120.49,-151.06 162.53,0 162.53,0 C162.53,0 188.45,0 188.45,0 C188.45,0 236.33,-182.19 236.33,-182.19 C236.33,-182.19 209.27,-182.19 209.27,-182.19 C209.27,-182.19 174.92,-33.89 174.92,-33.89 C174.92,-33.89 133.65,-182.19 133.65,-182.19 C133.65,-182.19 106.97,-182.19 106.97,-182.19 C106.97,-182.19 65.79,-34.17 65.79,-34.17 C65.79,-34.17 31.44,-182.19 31.44,-182.19 C31.44,-182.19 4.65,-182.19 4.65,-182.19z"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="4"
+                      style="display: inherit;"
+                    />
+                    <path
+                      d=" M21.7,0 C21.7,0 155.77,0 155.77,0 C155.77,0 155.77,-21.7 155.77,-21.7 C155.77,-21.7 45.77,-21.7 45.77,-21.7 C45.77,-21.7 45.77,-83.47 45.77,-83.47 C45.77,-83.47 145.73,-83.47 145.73,-83.47 C145.73,-83.47 145.73,-104.55 145.73,-104.55 C145.73,-104.55 45.77,-104.55 45.77,-104.55 C45.77,-104.55 45.77,-159.87 45.77,-159.87 C45.77,-159.87 153.91,-159.87 153.91,-159.87 C153.91,-159.87 153.91,-182.19 153.91,-182.19 C153.91,-182.19 21.7,-182.19 21.7,-182.19 C21.7,-182.19 21.7,0 21.7,0z"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="4"
+                      style="display: inherit;"
+                    />
+                    <path
+                      d=" M19.35,0 C19.35,0 135.43,0 135.43,0 C135.43,0 135.43,-21.7 135.43,-21.7 C135.43,-21.7 44.03,-21.7 44.03,-21.7 C44.03,-21.7 44.03,-182.19 44.03,-182.19 C44.03,-182.19 19.35,-182.19 19.35,-182.19 C19.35,-182.19 19.35,0 19.35,0z"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="4"
+                      style="display: inherit;"
+                    />
+                    <path
+                      d=" M95.13,-187.15 C68.41,-187.15 47.44,-177.8 32.25,-159.11 C18.19,-141.89 11.16,-119.84 11.16,-92.96 C11.16,-57.54 20.52,-31.36 39.24,-14.4 C53.45,-1.57 71.03,4.84 91.95,4.84 C116.23,4.84 135.52,-2.98 149.82,-18.6 C161.75,-31.58 168.78,-47.67 170.9,-66.85 C170.9,-66.85 146.84,-66.85 146.84,-66.85 C144.4,-54.86 140.71,-45.19 135.76,-37.83 C126.42,-23.85 112.81,-16.87 94.94,-16.87 C75.53,-16.87 60.93,-23.51 51.14,-36.79 C41.35,-50.07 36.46,-67.39 36.46,-88.74 C36.46,-114.8 41.88,-134.15 52.72,-146.77 C63.56,-159.38 77.79,-165.69 95.41,-165.69 C109.87,-165.69 121.09,-162.27 129.09,-155.4 C137.09,-148.54 142.43,-139.24 145.11,-127.5 C145.11,-127.5 169.17,-127.5 169.17,-127.5 C167.78,-142.96 160.79,-156.77 148.21,-168.92 C135.62,-181.07 117.93,-187.15 95.13,-187.15z"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="4"
+                      style="display: inherit;"
+                    />
+                    <path
+                      d=" M97.98,-187.15 C67.22,-187.15 43.99,-175.91 28.28,-153.42 C16.04,-135.88 9.92,-114.8 9.92,-90.16 C9.92,-62.88 17.07,-40.31 31.38,-22.45 C47.42,-3.93 69.45,5.33 97.48,5.33 C127.5,5.33 150.61,-5.25 166.81,-26.42 C180.62,-44.44 187.52,-67.05 187.52,-94.26 C187.52,-119.39 181.49,-140.02 169.42,-156.15 C153.95,-176.82 130.14,-187.15 97.98,-187.15z M100.46,-16.62 C77.56,-16.62 61,-23.55 50.79,-37.41 C40.57,-51.27 35.47,-68.3 35.47,-88.49 C35.47,-113.73 41.42,-132.82 53.33,-145.77 C65.24,-158.72 80.61,-165.2 99.47,-165.2 C118.89,-165.2 134.21,-158.66 145.42,-145.59 C156.62,-132.51 162.22,-115.26 162.22,-93.83 C162.22,-73.55 157.37,-55.62 147.65,-40.02 C137.93,-24.42 122.2,-16.62 100.46,-16.62z"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="4"
+                      style="display: inherit;"
+                    />
+                    <path
+                      d=" M18.73,0 C18.73,0 42.29,0 42.29,0 C42.29,0 42.29,-107.53 42.29,-107.53 C42.29,-111.83 42.17,-118.55 41.92,-127.68 C41.67,-136.82 41.55,-143.62 41.55,-148.08 C41.55,-148.08 41.55,-153.66 41.55,-153.66 C41.55,-153.66 94.06,0 94.06,0 C94.06,0 118.52,0 118.52,0 C118.52,0 170.53,-153.66 170.53,-153.66 C170.53,-143.82 170.45,-134.6 170.28,-126.01 C170.12,-117.41 170.04,-111.25 170.04,-107.53 C170.04,-107.53 170.04,0 170.04,0 C170.04,0 193.6,0 193.6,0 C193.6,0 193.6,-182.19 193.6,-182.19 C193.6,-182.19 158.49,-182.19 158.49,-182.19 C158.49,-182.19 106.47,-28.15 106.47,-28.15 C106.47,-28.15 54.09,-182.19 54.09,-182.19 C54.09,-182.19 18.73,-182.19 18.73,-182.19 C18.73,-182.19 18.73,0 18.73,0z"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="4"
+                      style="display: inherit;"
+                    />
+                    <path
+                      d=" M21.7,0 C21.7,0 155.77,0 155.77,0 C155.77,0 155.77,-21.7 155.77,-21.7 C155.77,-21.7 45.77,-21.7 45.77,-21.7 C45.77,-21.7 45.77,-83.47 45.77,-83.47 C45.77,-83.47 145.73,-83.47 145.73,-83.47 C145.73,-83.47 145.73,-104.55 145.73,-104.55 C145.73,-104.55 45.77,-104.55 45.77,-104.55 C45.77,-104.55 45.77,-159.87 45.77,-159.87 C45.77,-159.87 153.91,-159.87 153.91,-159.87 C153.91,-159.87 153.91,-182.19 153.91,-182.19 C153.91,-182.19 21.7,-182.19 21.7,-182.19 C21.7,-182.19 21.7,0 21.7,0z"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="4"
+                      style="display: inherit;"
+                    />
+                  </g>
+                  <g
+                    opacity="1"
+                    style="display: block;"
+                    transform="matrix(1,0,0,1,2074.55810546875,1885.0670166015625)"
+                  />
+                  <g
+                    mask="url(#__lottie_element_17)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    mask="url(#__lottie_element_14)"
+                    style="display: none;"
+                  >
+                    <g>
+                      <path />
+                    </g>
+                  </g>
+                  <g
+                    clip-path="url(#__lottie_element_11)"
+                    opacity="1"
+                    style="display: block;"
+                    transform="matrix(0,0,0,0,2048,1556)"
+                  >
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,150.33999633789062,150.3159942626953)"
+                    >
+                      <path
+                        d=" M-150.08999633789062,150.06500244140625 C-150.08999633789062,150.06500244140625 150.08999633789062,150.06500244140625 150.08999633789062,150.06500244140625 C150.08999633789062,150.06500244140625 149.7449951171875,-151.7449951171875 149.7449951171875,-151.7449951171875 C149.7449951171875,-151.7449951171875 -150.08999633789062,-150.0659942626953 -150.08999633789062,-150.0659942626953 C-150.08999633789062,-150.0659942626953 -150.08999633789062,150.06500244140625 -150.08999633789062,150.06500244140625z"
+                        fill="rgb(62,53,205)"
+                        fill-opacity="1"
+                      />
+                    </g>
+                  </g>
+                  <g
+                    opacity="1"
+                    style="display: block;"
+                    transform="matrix(1,0,0,1,2048,1556)"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h2
+            class="description"
+          >
+            Yet Another Trivia Game by BS
+          </h2>
+          <div
+            class="button-container"
+          >
+            <button
+              class="button button"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="welcome"
+    >
+      <div
+        class="content"
+      >
+        <div
+          aria-label="animation"
+          role="button"
+          style="width: 100%; height: 100%; overflow: hidden; margin: 0px auto; outline: none;"
+          tabindex="0"
+          title=""
+        >
+          <svg
+            height="3112"
+            preserveAspectRatio="xMidYMid slice"
+            style="width: 100%; height: 100%; transform: translate3d(0,0,0);"
+            viewBox="0 0 4096 3112"
+            width="4096"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <clippath
+                id="__lottie_element_2"
+              >
+                <rect
+                  height="3112"
+                  width="4096"
+                  x="0"
+                  y="0"
+                />
+              </clippath>
+              <clippath
+                id="__lottie_element_4"
+              >
+                <path
+                  d="M0,0 L4096,0 L4096,3112 L0,3112z"
+                />
+              </clippath>
+              <clippath
+                id="__lottie_element_11"
+              >
+                <path
+                  clip-rule="nonzero"
+                  d=" M300.3399963378906,-1.684000015258789 C300.3399963378906,-1.684000015258789 -2.6600000858306885,-1.684000015258789 -2.6600000858306885,-1.684000015258789 C-2.6600000858306885,-1.684000015258789 -2.6600000858306885,300.3160095214844 -2.6600000858306885,300.3160095214844 C-2.6600000858306885,300.3160095214844 300.3399963378906,300.3160095214844 300.3399963378906,300.3160095214844 C300.3399963378906,300.3160095214844 300.3399963378906,-1.684000015258789 300.3399963378906,-1.684000015258789"
+                  fill="#ffffff"
+                  fill-opacity="1"
+                />
+              </clippath>
+              <mask
+                id="__lottie_element_14"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_17"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+                <path
+                  clip-rule="nonzero"
+                  fill="#000000"
+                />
+              </mask>
+              <clippath
+                id="__lottie_element_23"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </clippath>
+              <mask
+                id="__lottie_element_26"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_29"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_32"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_35"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_38"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_41"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_44"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_47"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_50"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_53"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_56"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_59"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_62"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_65"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_68"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+              <mask
+                id="__lottie_element_71"
+              >
+                <path
+                  clip-rule="nonzero"
+                  fill="#ffffff"
+                />
+              </mask>
+            </defs>
+            <g
+              clip-path="url(#__lottie_element_2)"
+            >
+              <g
+                clip-path="url(#__lottie_element_4)"
+                opacity="1"
+                style="display: block;"
+                transform="matrix(1,0,0,1,0,0)"
+              >
+                <g
+                  opacity="1"
+                  style="display: block;"
+                  transform="matrix(1,0,0,1,2048,1556)"
+                >
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,0,0)"
+                  >
+                    <path
+                      d=" M2048,-1556 C2048,-1556 2048,1556 2048,1556 C2048,1556 -2048,1556 -2048,1556 C-2048,1556 -2048,-1556 -2048,-1556 C-2048,-1556 2048,-1556 2048,-1556z"
+                      fill="rgb(255,255,255)"
+                      fill-opacity="1"
+                    />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_71)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_68)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_65)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_62)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_59)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_56)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_53)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_50)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_47)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_44)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_41)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_38)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_35)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_32)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_29)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_26)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  aria-label="WELCOME"
+                  clip-path="url(#__lottie_element_23)"
+                  fill="rgb(17,17,17)"
+                  font-family="Poppins"
+                  font-size="254"
+                  font-style="normal"
+                  font-weight="normal"
+                  style="display: none;"
+                >
+                  <path
+                    d=" M4.65,-182.19 C4.65,-182.19 52.28,0 52.28,0 C52.28,0 78.2,0 78.2,0 C78.2,0 120.49,-151.06 120.49,-151.06 C120.49,-151.06 162.53,0 162.53,0 C162.53,0 188.45,0 188.45,0 C188.45,0 236.33,-182.19 236.33,-182.19 C236.33,-182.19 209.27,-182.19 209.27,-182.19 C209.27,-182.19 174.92,-33.89 174.92,-33.89 C174.92,-33.89 133.65,-182.19 133.65,-182.19 C133.65,-182.19 106.97,-182.19 106.97,-182.19 C106.97,-182.19 65.79,-34.17 65.79,-34.17 C65.79,-34.17 31.44,-182.19 31.44,-182.19 C31.44,-182.19 4.65,-182.19 4.65,-182.19z"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="4"
+                    style="display: inherit;"
+                  />
+                  <path
+                    d=" M21.7,0 C21.7,0 155.77,0 155.77,0 C155.77,0 155.77,-21.7 155.77,-21.7 C155.77,-21.7 45.77,-21.7 45.77,-21.7 C45.77,-21.7 45.77,-83.47 45.77,-83.47 C45.77,-83.47 145.73,-83.47 145.73,-83.47 C145.73,-83.47 145.73,-104.55 145.73,-104.55 C145.73,-104.55 45.77,-104.55 45.77,-104.55 C45.77,-104.55 45.77,-159.87 45.77,-159.87 C45.77,-159.87 153.91,-159.87 153.91,-159.87 C153.91,-159.87 153.91,-182.19 153.91,-182.19 C153.91,-182.19 21.7,-182.19 21.7,-182.19 C21.7,-182.19 21.7,0 21.7,0z"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="4"
+                    style="display: inherit;"
+                  />
+                  <path
+                    d=" M19.35,0 C19.35,0 135.43,0 135.43,0 C135.43,0 135.43,-21.7 135.43,-21.7 C135.43,-21.7 44.03,-21.7 44.03,-21.7 C44.03,-21.7 44.03,-182.19 44.03,-182.19 C44.03,-182.19 19.35,-182.19 19.35,-182.19 C19.35,-182.19 19.35,0 19.35,0z"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="4"
+                    style="display: inherit;"
+                  />
+                  <path
+                    d=" M95.13,-187.15 C68.41,-187.15 47.44,-177.8 32.25,-159.11 C18.19,-141.89 11.16,-119.84 11.16,-92.96 C11.16,-57.54 20.52,-31.36 39.24,-14.4 C53.45,-1.57 71.03,4.84 91.95,4.84 C116.23,4.84 135.52,-2.98 149.82,-18.6 C161.75,-31.58 168.78,-47.67 170.9,-66.85 C170.9,-66.85 146.84,-66.85 146.84,-66.85 C144.4,-54.86 140.71,-45.19 135.76,-37.83 C126.42,-23.85 112.81,-16.87 94.94,-16.87 C75.53,-16.87 60.93,-23.51 51.14,-36.79 C41.35,-50.07 36.46,-67.39 36.46,-88.74 C36.46,-114.8 41.88,-134.15 52.72,-146.77 C63.56,-159.38 77.79,-165.69 95.41,-165.69 C109.87,-165.69 121.09,-162.27 129.09,-155.4 C137.09,-148.54 142.43,-139.24 145.11,-127.5 C145.11,-127.5 169.17,-127.5 169.17,-127.5 C167.78,-142.96 160.79,-156.77 148.21,-168.92 C135.62,-181.07 117.93,-187.15 95.13,-187.15z"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="4"
+                    style="display: inherit;"
+                  />
+                  <path
+                    d=" M97.98,-187.15 C67.22,-187.15 43.99,-175.91 28.28,-153.42 C16.04,-135.88 9.92,-114.8 9.92,-90.16 C9.92,-62.88 17.07,-40.31 31.38,-22.45 C47.42,-3.93 69.45,5.33 97.48,5.33 C127.5,5.33 150.61,-5.25 166.81,-26.42 C180.62,-44.44 187.52,-67.05 187.52,-94.26 C187.52,-119.39 181.49,-140.02 169.42,-156.15 C153.95,-176.82 130.14,-187.15 97.98,-187.15z M100.46,-16.62 C77.56,-16.62 61,-23.55 50.79,-37.41 C40.57,-51.27 35.47,-68.3 35.47,-88.49 C35.47,-113.73 41.42,-132.82 53.33,-145.77 C65.24,-158.72 80.61,-165.2 99.47,-165.2 C118.89,-165.2 134.21,-158.66 145.42,-145.59 C156.62,-132.51 162.22,-115.26 162.22,-93.83 C162.22,-73.55 157.37,-55.62 147.65,-40.02 C137.93,-24.42 122.2,-16.62 100.46,-16.62z"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="4"
+                    style="display: inherit;"
+                  />
+                  <path
+                    d=" M18.73,0 C18.73,0 42.29,0 42.29,0 C42.29,0 42.29,-107.53 42.29,-107.53 C42.29,-111.83 42.17,-118.55 41.92,-127.68 C41.67,-136.82 41.55,-143.62 41.55,-148.08 C41.55,-148.08 41.55,-153.66 41.55,-153.66 C41.55,-153.66 94.06,0 94.06,0 C94.06,0 118.52,0 118.52,0 C118.52,0 170.53,-153.66 170.53,-153.66 C170.53,-143.82 170.45,-134.6 170.28,-126.01 C170.12,-117.41 170.04,-111.25 170.04,-107.53 C170.04,-107.53 170.04,0 170.04,0 C170.04,0 193.6,0 193.6,0 C193.6,0 193.6,-182.19 193.6,-182.19 C193.6,-182.19 158.49,-182.19 158.49,-182.19 C158.49,-182.19 106.47,-28.15 106.47,-28.15 C106.47,-28.15 54.09,-182.19 54.09,-182.19 C54.09,-182.19 18.73,-182.19 18.73,-182.19 C18.73,-182.19 18.73,0 18.73,0z"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="4"
+                    style="display: inherit;"
+                  />
+                  <path
+                    d=" M21.7,0 C21.7,0 155.77,0 155.77,0 C155.77,0 155.77,-21.7 155.77,-21.7 C155.77,-21.7 45.77,-21.7 45.77,-21.7 C45.77,-21.7 45.77,-83.47 45.77,-83.47 C45.77,-83.47 145.73,-83.47 145.73,-83.47 C145.73,-83.47 145.73,-104.55 145.73,-104.55 C145.73,-104.55 45.77,-104.55 45.77,-104.55 C45.77,-104.55 45.77,-159.87 45.77,-159.87 C45.77,-159.87 153.91,-159.87 153.91,-159.87 C153.91,-159.87 153.91,-182.19 153.91,-182.19 C153.91,-182.19 21.7,-182.19 21.7,-182.19 C21.7,-182.19 21.7,0 21.7,0z"
+                    stroke-linecap="butt"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="4"
+                    style="display: inherit;"
+                  />
+                </g>
+                <g
+                  opacity="1"
+                  style="display: block;"
+                  transform="matrix(1,0,0,1,2074.55810546875,1885.0670166015625)"
+                />
+                <g
+                  mask="url(#__lottie_element_17)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  mask="url(#__lottie_element_14)"
+                  style="display: none;"
+                >
+                  <g>
+                    <path />
+                  </g>
+                </g>
+                <g
+                  clip-path="url(#__lottie_element_11)"
+                  opacity="1"
+                  style="display: block;"
+                  transform="matrix(0,0,0,0,2048,1556)"
+                >
+                  <g
+                    opacity="1"
+                    transform="matrix(1,0,0,1,150.33999633789062,150.3159942626953)"
+                  >
+                    <path
+                      d=" M-150.08999633789062,150.06500244140625 C-150.08999633789062,150.06500244140625 150.08999633789062,150.06500244140625 150.08999633789062,150.06500244140625 C150.08999633789062,150.06500244140625 149.7449951171875,-151.7449951171875 149.7449951171875,-151.7449951171875 C149.7449951171875,-151.7449951171875 -150.08999633789062,-150.0659942626953 -150.08999633789062,-150.0659942626953 C-150.08999633789062,-150.0659942626953 -150.08999633789062,150.06500244140625 -150.08999633789062,150.06500244140625z"
+                      fill="rgb(62,53,205)"
+                      fill-opacity="1"
+                    />
+                  </g>
+                </g>
+                <g
+                  opacity="1"
+                  style="display: block;"
+                  transform="matrix(1,0,0,1,2048,1556)"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <h2
+          class="description"
+        >
+          Yet Another Trivia Game by BS
+        </h2>
+        <div
+          class="button-container"
+        >
+          <button
+            class="button button"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

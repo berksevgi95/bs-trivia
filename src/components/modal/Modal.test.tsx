@@ -1,8 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import Modal from './Modal';
 
 test('renders and matches its snapshots without any crash', () => {
-  const wrapper = render(<App />);
+  const wrapper = render(
+    <Modal>
+      <div>Example Content</div>
+    </Modal>
+  );
   expect(wrapper).toMatchSnapshot();
 });

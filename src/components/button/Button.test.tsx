@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import Button from './Button';
 
 test('renders and matches its snapshots without any crash', () => {
-  const wrapper = render(<App />);
+  const wrapper = render(
+    <Button/>
+  );
   expect(wrapper).toMatchSnapshot();
 });

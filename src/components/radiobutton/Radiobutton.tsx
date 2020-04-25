@@ -17,16 +17,14 @@ const Radiobutton: React.FC<IRadiobuttonProps> = ({
     checked,
 })=> {
 
-    const [id] = React.useState('bs-radio' + Math.floor(Math.random() * (1000 + 1)));
-
     const handleChange = (value: any) => () => {
         onChange(value)
     }
 
     return (
-        <label className="bs bs-radio" htmlFor={id}>
+        <label className="bs bs-radio" htmlFor={value}>
             <input
-                id={id}
+                id={value}
                 name="name"
                 type="radio"
                 value={value}

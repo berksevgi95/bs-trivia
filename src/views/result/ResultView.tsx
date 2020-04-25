@@ -6,7 +6,7 @@ import './ResultView.scss'
 import Button from '../../components/button/Button';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 
-interface IResultState {
+export interface IResultState {
   correctCount: number,
   points: number,
   questionCount: number,
