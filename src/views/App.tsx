@@ -17,16 +17,19 @@ const App: React.FC<{}> = () => {
 
       <Router>
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/welcome" />
+          </Route>
           <Route path="/welcome">
             <WelcomeView />
           </Route>
-          <Route path="/questions">
+          <Route path="/questions/d/:difficulty/c/:category">
             <QuestionsView />
           </Route>
           <Route path="/result">
             <ResultView />
           </Route>
-          <Route exact path="/">
+          <Route path='*' exact>
             <Redirect to="/welcome" />
           </Route>
         </Switch>

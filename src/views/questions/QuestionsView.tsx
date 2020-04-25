@@ -15,7 +15,6 @@ import * as _sad from '../../assets/lotties/sad.json';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import Background from '../../assets/img/background.png'
 
-// TODO
 // @ts-ignore
 import {AbsoluteSelector} from 'react-absolute-selector'
 import 'react-absolute-selector/build/index.css';
@@ -46,9 +45,12 @@ export interface IQuestionsViewProps extends RouteComponentProps {
 
 const QuestionView: React.FC<IQuestionsViewProps> = ({
   url,
+  match,
+  history,
   ...props
 }) => {
 
+  const { difficulty, category } = (match.params as any)
   const questionRef = React.useRef<any>();
 
   const [ready, setReady] = React.useState<EReadyState>(EReadyState.NOT_READY);
@@ -60,15 +62,13 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
   const [correctCount, setCorrectCount] = React.useState<number>(0);
   const [viewState, setViewState] = React.useState<EViewState>(EViewState.QUESTION_VIEW)
   const [jokerUsed, setJokerUsed] = React.useState<boolean>(false);
-  const [difficulty, setDifficulty] = React.useState<EDifficulty>(EDifficulty.EASY);
-  const [category, setCategory] = React.useState<ECategory>(ECategory.GENERAL_KNOWLEDGE);
   
   const errorLottie = (_error as any).default;
   const sadLottie = (_sad as any).default;
 
   React.useEffect(() => {
-    initialize(difficulty, category);
-  }, [])
+    initialize();
+  }, [match])
 
   React.useEffect(() => {
     if (time === 0) {
@@ -77,11 +77,11 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
     }
   }, [time])
 
-  const initialize = (_difficulty: EDifficulty, _category: ECategory) => {
+  const initialize = () => {
     setViewState(EViewState.QUESTION_VIEW)
     setReady(EReadyState.NOT_READY)
     setQuestions([]);
-    axios.get(url || `https://opentdb.com/api.php?amount=10&category=${_category}&difficulty=${_difficulty}&type=multiple`)
+    axios.get(url || `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`)
       .then((response) => {
         if (response && response.data && response.data.results && response.data.results.length > 0) {
           setQuestions((response.data.results as IQuestion[]))
@@ -127,7 +127,7 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
 
   const handleContinue = () => {
     if (index === questions.length - 1) {
-      props.history.push({
+      history.push({
         pathname: '/result',
         state: {
           points,
@@ -149,7 +149,7 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
   }
 
   const handleRedirectWelcomePage = () => {
-    props.history.push('/welcome')
+    history.push('/welcome')
   }
 
 
@@ -268,17 +268,11 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
     label: string,
     value: EDifficulty
   }) => {
-    setDifficulty(option.value)
-    initialize(option.value, category)
+    history.push(`/questions/d/${option.value}/c/${category}`)
   }
 
   const handleChangeCategory = (value: ECategory) => {
-    setCategory(value);
-    initialize(difficulty, value)
-  }
-
-  const handleTryAgain = () => {
-    initialize(difficulty, category)
+    history.push(`/questions/d/${difficulty}/c/${value}`)
   }
 
   return (
@@ -304,7 +298,7 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
                 value: EDifficulty.HARD
               }]}
               onClick={handleChangeDifficulty}
-              value={difficulty}
+              value={difficulty || EDifficulty.EASY}
             />
           </div>
           <div className="w-full mb-10">
@@ -317,7 +311,7 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
                 label={keyValue.label}
                 onChange={handleChangeCategory}
                 value={keyValue.value}
-                checked={category === keyValue.value}
+                checked={category === keyValue.value.toString()}
               />
             ))}
           </div>
@@ -396,7 +390,7 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
                 <div className="w-full">
                   <Button
                     className="w-full"
-                    onClick={handleTryAgain}
+                    onClick={initialize}
                   >
                     Try Again
                   </Button>
@@ -430,7 +424,7 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
                 <div className="w-full">
                   <Button
                     className="w-full"
-                    onClick={handleTryAgain}
+                    onClick={initialize}
                   >
                     Try Again
                   </Button>

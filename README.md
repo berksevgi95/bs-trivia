@@ -1,8 +1,10 @@
 # BS Trivia
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5236bbb6-5439-4ffa-8c8f-62996823c0d9/deploy-status)](https://app.netlify.com/sites/priceless-poincare-e3ed14/deploys)
+
 Yet another simple trivia game made by [BS](https://berksevgi95.github.io/me/) and bootstrapped by [Create React App](https://github.com/facebook/create-react-app).
 
-[Click](https://lucid-villani-3481e4.netlify.app) to check demo
+[Click](https://priceless-poincare-e3ed14.netlify.app/) to check demo
 
 ## Get Started
 
@@ -115,7 +117,7 @@ As of now, the application has the following test coverage percentage rates:
 
 File                      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 --------------------------|----------|----------|----------|----------|-------------------|
-All files                |<b>84.87</b>|<b>82.76</b>|<b>87.23</b>|<b>84.35</b>|            |
+All files                 |    76.19 |    71.67 |    80.43 |    75.35 |                   |
  components/button        |      100 |      100 |      100 |      100 |                   |
   Button.tsx              |      100 |      100 |      100 |      100 |                   |
  components/modal         |      100 |      100 |      100 |      100 |                   |
@@ -132,8 +134,8 @@ All files                |<b>84.87</b>|<b>82.76</b>|<b>87.23</b>|<b>84.35</b>|  
   shuffle.ts              |      100 |      100 |      100 |      100 |                   |
  views                    |      100 |      100 |      100 |      100 |                   |
   App.tsx                 |      100 |      100 |      100 |      100 |                   |
- views/questions          |    71.25 |    71.88 |    68.42 |    71.25 |                   |
-  QuestionsView.tsx       |    71.25 |    71.88 |    68.42 |    71.25 |... 98,226,227,281 |
+ views/questions          |    53.33 |    52.94 |       50 |    53.33 |                   |
+  QuestionsView.tsx       |    53.33 |    52.94 |       50 |    53.33 |... 25,226,227,255 |
  views/questions/question |      100 |     87.5 |      100 |      100 |                   |
   Question.tsx            |      100 |     87.5 |      100 |      100 |                28 |
  views/result             |      100 |      100 |      100 |      100 |                   |
@@ -154,8 +156,6 @@ Like every software, definitely yes. First of all, I would try to make the app d
 
 ### What would I do differently if I had more time?
 
-If I had more time, I would implement the filtering & querying mechanism by defining each parameters to URL as a query parameter, so I could make the application more stateful.
+If I had more time,I would start to deploy my "bs-ui" component library to npm with full code coverage scoring status and import it to this application.
 
 In addition, I would fix the "prop-type" error for my component `react-absolute-selector` and make it more optimized for mobile screens.
-
-And especially, I would start to deploy my "bs-ui" component library to npm with full code coverage scoring status and import it to this application.

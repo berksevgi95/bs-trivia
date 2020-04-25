@@ -5,6 +5,8 @@ import * as _welcome from '../../assets/lotties/welcome.json';
 import './WelcomeView.scss';
 import Button from '../../components/button/Button';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { EDifficulty } from '../../models/EDifficulty';
+import { ECategory } from '../../models/ECategory';
 
 const WelcomeView: React.FC<RouteComponentProps> = ({
   ...props
@@ -13,7 +15,7 @@ const WelcomeView: React.FC<RouteComponentProps> = ({
   const welcomeLottie = (_welcome as any).default;
 
   const handleRedirectQuestions = () => {
-    props.history.push('/questions')
+    props.history.push(`/questions/d/${EDifficulty.EASY}/c/${ECategory.GENERAL_KNOWLEDGE}`)
   }
 
   return (
