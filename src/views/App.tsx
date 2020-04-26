@@ -23,7 +23,7 @@ const App: React.FC<{}> = () => {
           <Route path="/welcome">
             <WelcomeView />
           </Route>
-          <Route path="/questions/d/:difficulty/c/:category">
+          <Route path="/questions/difficulty/:difficulty/category/:category">
             <QuestionsView />
           </Route>
           <Route path="/result">

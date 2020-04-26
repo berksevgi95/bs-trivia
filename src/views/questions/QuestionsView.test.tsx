@@ -1,9 +1,6 @@
 import React from 'react';
 import {
   render,
-  fireEvent,
-  getByTitle,
-  getByText
 } from '@testing-library/react';
 import QuestionsView from './QuestionsView';
 import { Router } from 'react-router-dom';
@@ -31,34 +28,6 @@ test('should crash when wrong url is entered', () => {
     </Router>
   );
   
-});
-
-
-test('should press options menu change difficulty and catergory', () => {
-  const history = createMemoryHistory();
-  
-  const {container} = render(
-    <Router history={history}>
-      <QuestionsView />
-    </Router>
-  );
-
-  fireEvent.click(
-    getByTitle(container, 'Options')
-  )
-
-  fireEvent.click(
-    getByText(container, 'Easy')
-  )
-
-  fireEvent.click(
-    getByText(container, 'Medium')
-  )
-
-  fireEvent.click(
-    getByText(container, 'Art')
-  )
-
 });
 
 

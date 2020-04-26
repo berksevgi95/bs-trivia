@@ -6,7 +6,13 @@ import './WelcomeView.scss';
 import Button from '../../components/button/Button';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { EDifficulty } from '../../models/EDifficulty';
-import { ECategory } from '../../models/ECategory';
+import { ECategory, categoryKeyValues } from '../../models/ECategory';
+
+// @ts-ignore
+import {AbsoluteSelector} from 'react-absolute-selector'
+import 'react-absolute-selector/build/index.css';
+import Select from '../../components/select/Select';
+import Radiobutton from '../../components/radiobutton/Radiobutton';
 
 const WelcomeView: React.FC<RouteComponentProps> = ({
   ...props
@@ -14,12 +20,67 @@ const WelcomeView: React.FC<RouteComponentProps> = ({
 
   const welcomeLottie = (_welcome as any).default;
 
+  const [difficulty, setDifficulty] = React.useState<EDifficulty>(EDifficulty.EASY);
+  const [category, setCategory] = React.useState<ECategory>(ECategory.GENERAL_KNOWLEDGE);
+
+  const handleChangeDifficulty = (option: {
+    label: string,
+    value: EDifficulty
+  }) => {
+    setDifficulty(option.value)
+  }
+
+  const handleChangeCategory = (value: ECategory) => {
+    setCategory(value);
+  }
+
+
   const handleRedirectQuestions = () => {
-    props.history.push(`/questions/d/${EDifficulty.EASY}/c/${ECategory.GENERAL_KNOWLEDGE}`)
+    props.history.push(`/questions/difficulty/${difficulty}/category/${category}`)
   }
 
   return (
     <div className="welcome">
+      <AbsoluteSelector
+        title="Options"
+      >
+        <div className="m-10">
+          <div className="w-full mb-10">
+            Difficulty
+          </div>
+          <div className="w-full mb-10">
+            <Select
+              className="w-full"
+              options={[{
+                label: 'Easy',
+                value: EDifficulty.EASY
+              }, {
+                label: 'Medium',
+                value: EDifficulty.MEDIUM
+              }, {
+                label: 'Hard',
+                value: EDifficulty.HARD
+              }]}
+              onClick={handleChangeDifficulty}
+              value={difficulty}
+            />
+          </div>
+          <div className="w-full mb-10">
+            Category
+          </div>
+          <div className="w-full mb-10">
+            {categoryKeyValues.map((keyValue) => (
+              <Radiobutton
+                key={keyValue.value}
+                label={keyValue.label}
+                onChange={handleChangeCategory}
+                value={keyValue.value}
+                checked={category === keyValue.value}
+              />
+            ))}
+          </div>
+        </div>
+      </AbsoluteSelector>
       <div className="content">
         <Lottie
           options={{

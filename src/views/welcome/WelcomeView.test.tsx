@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  render, fireEvent, getByText,
+  render, fireEvent, getByText, getByTitle,
 } from '@testing-library/react';
 import WelcomeView from './WelcomeView';
 import { Router } from 'react-router-dom';
@@ -29,4 +29,32 @@ test('fires click event', () => {
   fireEvent.click(
     getByText(container, 'Get Started')
   )
+});
+
+
+test('should press options menu change difficulty and catergory', () => {
+  const history = createMemoryHistory();
+  
+  const {container} = render(
+    <Router history={history}>
+      <WelcomeView />
+    </Router>
+  );
+  
+  fireEvent.click(
+    getByTitle(container, 'Options')
+  )
+
+  fireEvent.click(
+    getByText(container, 'Easy')
+  )
+
+  fireEvent.click(
+    getByText(container, 'Medium')
+  )
+
+  fireEvent.click(
+    getByText(container, 'Art')
+  )
+
 });

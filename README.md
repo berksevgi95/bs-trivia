@@ -1,10 +1,10 @@
 # BS Trivia
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d1b91217-8d5b-4efc-a5e6-a613e9a8aec2/deploy-status)](https://app.netlify.com/sites/lucid-beaver-b58311/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b6c647c2-4b7f-45ad-b7e4-d1ec39a2cd6d/deploy-status)](https://app.netlify.com/sites/boring-johnson-478048/deploys)
 
 Yet another simple trivia game made by [BS](https://berksevgi95.github.io/me/) and bootstrapped by [Create React App](https://github.com/facebook/create-react-app).
 
-[Click](https://lucid-beaver-b58311.netlify.app) to check demo
+[Click](https://boring-johnson-478048.netlify.app) to check demo
 
 ## Get Started
 
@@ -117,7 +117,7 @@ As of now, the application has the following test coverage percentage rates:
 
 File                      |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 --------------------------|----------|----------|----------|----------|-------------------|
-All files                 |    76.19 |    71.67 |    80.43 |    75.35 |                   |
+All files                 |    76.67 |    70.69 |    80.43 |    75.86 |                   |
  components/button        |      100 |      100 |      100 |      100 |                   |
   Button.tsx              |      100 |      100 |      100 |      100 |                   |
  components/modal         |      100 |      100 |      100 |      100 |                   |
@@ -134,8 +134,8 @@ All files                 |    76.19 |    71.67 |    80.43 |    75.35 |         
   shuffle.ts              |      100 |      100 |      100 |      100 |                   |
  views                    |      100 |      100 |      100 |      100 |                   |
   App.tsx                 |      100 |      100 |      100 |      100 |                   |
- views/questions          |    53.33 |    52.94 |       50 |    53.33 |                   |
-  QuestionsView.tsx       |    53.33 |    52.94 |       50 |    53.33 |... 25,226,227,255 |
+ views/questions          |     50.7 |       50 |       40 |     50.7 |                   |
+  QuestionsView.tsx       |     50.7 |       50 |       40 |     50.7 |... 25,226,227,255 |
  views/questions/question |      100 |     87.5 |      100 |      100 |                   |
   Question.tsx            |      100 |     87.5 |      100 |      100 |                28 |
  views/result             |      100 |      100 |      100 |      100 |                   |

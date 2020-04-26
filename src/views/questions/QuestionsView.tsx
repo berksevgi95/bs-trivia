@@ -15,14 +15,6 @@ import * as _sad from '../../assets/lotties/sad.json';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import Background from '../../assets/img/background.png'
 
-// @ts-ignore
-import {AbsoluteSelector} from 'react-absolute-selector'
-import 'react-absolute-selector/build/index.css';
-import Select from '../../components/select/Select';
-import { EDifficulty } from '../../models/EDifficulty';
-import Radiobutton from '../../components/radiobutton/Radiobutton';
-import { ECategory, categoryKeyValues } from '../../models/ECategory';
-
 const TIME = 15;
 
 enum EViewState {
@@ -47,7 +39,6 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
   url,
   match,
   history,
-  ...props
 }) => {
 
   const { difficulty, category } = (match.params as any)
@@ -78,6 +69,7 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
   }, [time])
 
   const initialize = () => {
+    setPoints(0);
     setViewState(EViewState.QUESTION_VIEW)
     setReady(EReadyState.NOT_READY)
     setQuestions([]);
@@ -212,12 +204,20 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
               False Answer
             </h3>
           </div>
-          <div className="w-full">
+          <div className="w-full mb-15">
             <Button
               className="w-full"
               onClick={handleRedirectWelcomePage}
             >
               Go to Welcome Page
+            </Button>
+          </div>
+          <div className="w-full">
+            <Button
+              className="w-full"
+              onClick={initialize}
+            >
+              Try Again
             </Button>
           </div>
         </div>
@@ -264,61 +264,9 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
     }
   }
 
-  const handleChangeDifficulty = (option: {
-    label: string,
-    value: EDifficulty
-  }) => {
-    history.push(`/questions/d/${option.value}/c/${category}`)
-  }
-
-  const handleChangeCategory = (value: ECategory) => {
-    history.push(`/questions/d/${difficulty}/c/${value}`)
-  }
-
   return (
     <div className="questions">
-      <AbsoluteSelector
-        title="Options"
-      >
-        <div className="m-10">
-          <div className="w-full mb-10">
-            Difficulty
-          </div>
-          <div className="w-full mb-10">
-            <Select
-              className="w-full"
-              options={[{
-                label: 'Easy',
-                value: EDifficulty.EASY
-              }, {
-                label: 'Medium',
-                value: EDifficulty.MEDIUM
-              }, {
-                label: 'Hard',
-                value: EDifficulty.HARD
-              }]}
-              onClick={handleChangeDifficulty}
-              value={difficulty || EDifficulty.EASY}
-            />
-          </div>
-          <div className="w-full mb-10">
-            Category
-          </div>
-          <div className="w-full mb-10">
-            {categoryKeyValues.map((keyValue) => (
-              <Radiobutton 
-                key={keyValue.value}
-                label={keyValue.label}
-                onChange={handleChangeCategory}
-                value={keyValue.value}
-                checked={category === keyValue.value.toString()}
-              />
-            ))}
-          </div>
-        </div>
-        
-        
-      </AbsoluteSelector>
+      
       <aside>
         {ready === EReadyState.READY && (
           <div className="panel fadein m-auto">
