@@ -1,7 +1,5 @@
 # BS Trivia
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b6c647c2-4b7f-45ad-b7e4-d1ec39a2cd6d/deploy-status)](https://app.netlify.com/sites/boring-johnson-478048/deploys)
-
 Yet another simple trivia game made by [BS](https://berksevgi95.github.io/me/) and bootstrapped by [Create React App](https://github.com/facebook/create-react-app).
 
 [Click](https://boring-johnson-478048.netlify.app) to check demo

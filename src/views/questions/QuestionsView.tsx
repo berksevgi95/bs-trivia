@@ -12,6 +12,7 @@ import * as _false from '../../assets/lotties/false.json';
 import * as _timesup from '../../assets/lotties/timesup.json';
 import * as _error from '../../assets/lotties/error.json';
 import * as _sad from '../../assets/lotties/sad.json';
+import LeftArrow from '../../assets/svg/left-arrow.svg';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import Background from '../../assets/img/background.png'
 
@@ -134,7 +135,6 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
     
   }
 
-
   const handleFalseAnswer = () => {
     clearInterval(timer)
     setViewState(EViewState.FALSE_VIEW);
@@ -144,6 +144,9 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
     history.push('/welcome')
   }
 
+  const handleNavigateHome = () => {
+    history.push('/')
+  }
 
   const renderQuestion = () => {
     if (viewState === EViewState.CORRECT_VIEW) {
@@ -270,6 +273,14 @@ const QuestionView: React.FC<IQuestionsViewProps> = ({
       <aside>
         {ready === EReadyState.READY && (
           <div className="panel fadein m-auto">
+            <div className="info">
+              <img
+                alt="nav-button"
+                className="back-button"
+                src={LeftArrow}
+                onClick={handleNavigateHome}
+              />
+            </div>
             <div className="info">
               Points
               <h2>
