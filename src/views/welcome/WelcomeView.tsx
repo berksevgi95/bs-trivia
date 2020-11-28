@@ -1,18 +1,14 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import * as _welcome from '../../assets/lotties/welcome.json';
-
-import './WelcomeView.scss';
+import Select from '../../components/select/Select';
 import Button from '../../components/button/Button';
+
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { EDifficulty } from '../../models/EDifficulty';
 import { ECategory, categoryKeyValues } from '../../models/ECategory';
 
-// @ts-ignore
-import {AbsoluteSelector} from 'react-absolute-selector'
-import 'react-absolute-selector/build/index.css';
-import Select from '../../components/select/Select';
-import Radiobutton from '../../components/radiobutton/Radiobutton';
+import './WelcomeView.scss';
 
 const WelcomeView: React.FC<RouteComponentProps> = ({
   ...props
@@ -30,10 +26,9 @@ const WelcomeView: React.FC<RouteComponentProps> = ({
     setDifficulty(option.value)
   }
 
-  const handleChangeCategory = (value: ECategory) => {
-    setCategory(value);
+  const handleChangeCategory = (selection: any) => {
+    setCategory(selection.value);
   }
-
 
   const handleRedirectQuestions = () => {
     props.history.push(`/questions/difficulty/${difficulty}/category/${category}`)
@@ -41,64 +36,61 @@ const WelcomeView: React.FC<RouteComponentProps> = ({
 
   return (
     <div className="welcome">
-      <AbsoluteSelector
-        title="Options"
-      >
-        <div className="m-10">
-          <div className="w-full mb-10">
-            Difficulty
-          </div>
-          <div className="w-full mb-10">
-            <Select
-              className="w-full"
-              options={[{
-                label: 'Easy',
-                value: EDifficulty.EASY
-              }, {
-                label: 'Medium',
-                value: EDifficulty.MEDIUM
-              }, {
-                label: 'Hard',
-                value: EDifficulty.HARD
-              }]}
-              onClick={handleChangeDifficulty}
-              value={difficulty}
-            />
-          </div>
-          <div className="w-full mb-10">
-            Category
-          </div>
-          <div className="w-full mb-10">
-            {categoryKeyValues.map((keyValue) => (
-              <Radiobutton
-                key={keyValue.value}
-                label={keyValue.label}
-                onChange={handleChangeCategory}
-                value={keyValue.value}
-                checked={category === keyValue.value}
-              />
-            ))}
-          </div>
-        </div>
-      </AbsoluteSelector>
       <div className="content">
-        <Lottie
-          options={{
-            loop: false,
-            animationData: welcomeLottie,
-            rendererSettings: {
-              preserveAspectRatio: 'xMidYMid slice'
-            }
-          }}
-          isClickToPauseDisabled
-        />
-        <h2 className="description">
-          Yet Another Trivia Game by BS
-        </h2>
-        <div className="button-container">
-          <Button className="button" onClick={handleRedirectQuestions}>
-            Get Started
-          </Button>
+        <div className="h-50">
+          <Lottie
+            options={{
+              loop: true,
+              animationData: welcomeLottie,
+              rendererSettings: {
+                preserveAspectRatio: 'xMidYMid slice'
+              }
+            }}
+            isClickToPauseDisabled
+          />
+        </div>
+        
+        <div className="settings h-50 w-full">
+          <div className="container">
+            <div className="w-full mb-10">
+              Difficulty
+            </div>
+            <div className="w-full mb-10">
+              <Select
+                className="w-full"
+                options={[{
+                  label: 'Easy',
+                  value: EDifficulty.EASY
+                }, {
+                  label: 'Medium',
+                  value: EDifficulty.MEDIUM
+                }, {
+                  label: 'Hard',
+                  value: EDifficulty.HARD
+                }]}
+                onClick={handleChangeDifficulty}
+                value={difficulty}
+              />
+            </div>
+            <div className="w-full mb-10">
+              Category
+            </div>
+            <div className="w-full mb-10">
+              <Select
+                className="w-full"
+                options={categoryKeyValues}
+                onClick={handleChangeCategory}
+                value={category}
+              />
+            </div>
+            <Button
+              className="button w-full"
+              onClick={handleRedirectQuestions}
+            >
+              Get Started
+            </Button>
+          </div>
+          
         </div>
       </div>
     </div>

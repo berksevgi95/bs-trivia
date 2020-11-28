@@ -1,6 +1,4 @@
-import React, {
-    useState
-} from 'react';
+import React from 'react';
 
 import './Select.scss'
 
@@ -24,7 +22,7 @@ const Select: React.FC<ISelectProps<any>> = ({
 }) => {
 
     const ref = React.useRef<any>();
-    const [expanded, setExpanded] = useState();
+    const [expanded, setExpanded] = React.useState<boolean>();
 
     const handleOnClick = () => {
         setExpanded(!expanded);
@@ -38,6 +36,7 @@ const Select: React.FC<ISelectProps<any>> = ({
 
     const handleOnOptionClick = (option: any) => (e: any) => {
         onClick(option, e);
+        setExpanded(false);
     }
 
     React.useEffect(() => {
@@ -48,8 +47,19 @@ const Select: React.FC<ISelectProps<any>> = ({
     }, [])
 
     return (
-        <div ref={ref} className={`bs bs-select ${className || ''}`} onClick={handleOnClick}>
-            {options && options.length > 0 && options.filter((option : any) => option.value === value)[0].label}
+        <div
+            className={`bs bs-select ${className || ''}`}
+            ref={ref}
+        >
+            <div
+                className="bs-selector"
+                onClick={handleOnClick}
+            >
+                {options && 
+                    options.length > 0 &&
+                    options.filter((option : any) => option.value === value)[0].label
+                }
+            </div>
             {expanded && (
                 <ul className="bs-options">
                     {options && options.length > 0 && options.map((option: any) => (

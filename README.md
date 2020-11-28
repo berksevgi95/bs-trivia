@@ -58,7 +58,6 @@ Dependencies used in this project for operational purposes are listed below:
     <li><b>jest-canvas-mock@2.2.0</b> Canvas mocking when run unit test cases with jest.</li>
     <li><b>node-sass@4.13.1</b> A library that provides binding for Node.js to LibSass</li>
     <li><b>react-lottie@1.2.3</b> Lottie animation view for React</li>
-    <li><b>react-absolute-selector@1.0.1</b> A fixed-positioned, globally accessible, movable and minimal selector component written by <a href="https://github.com/berksevgi95">@berksevgi95</a> (yeah, it's me)</li>
 </ul>
 
 Additionally, I also included a library of components called "bs-ui" that is not yet ready to serve on npm. Repo link is [here](https://github.com/berksevgi95/bs-ui)
@@ -122,8 +121,6 @@ All files                 |    76.67 |    70.69 |    80.43 |    75.86 |         
   Button.tsx              |      100 |      100 |      100 |      100 |                   |
  components/modal         |      100 |      100 |      100 |      100 |                   |
   Modal.tsx               |      100 |      100 |      100 |      100 |                   |
- components/radiobutton   |      100 |      100 |      100 |      100 |                   |
-  Radiobutton.tsx         |      100 |      100 |      100 |      100 |                   |
  components/select        |      100 |      100 |      100 |      100 |                   |
   Select.tsx              |      100 |      100 |      100 |      100 |                   |
  models                   |      100 |      100 |      100 |      100 |                   |
@@ -158,4 +155,3 @@ Like every software, definitely yes. First of all, I would try to make the app d
 
 If I had more time,I would start to deploy my "bs-ui" component library to npm with full code coverage scoring status and import it to this application.
 
-In addition, I would fix the "prop-type" error for my component `react-absolute-selector` and make it more optimized for mobile screens.

@@ -1,9 +1,10 @@
 import React from 'react';
+
+import Button from '../../../components/button/Button';
+import shuffle from '../../../utils/shuffle';
 import { IQuestion } from '../../../models/IQuestion';
 
 import './Question.scss'
-import Button from '../../../components/button/Button';
-import shuffle from '../../../utils/shuffle';
 
 export interface IQuestionProps {
   className?: string,
@@ -26,7 +27,10 @@ const Question: React.FC<IQuestionProps> = React.forwardRef(({
   React.useImperativeHandle(ref, () => ({
     joker: () => {
       if (selectedOptions.length === 0) {
-        setSelectedOptions([questionObj.correct_answer, questionObj.incorrect_answers[Math.floor(Math.random() * Math.floor(2))]])
+        setSelectedOptions([
+          questionObj.correct_answer,
+          questionObj.incorrect_answers[Math.floor(Math.random() * Math.floor(2))]
+        ])
       }
     }
   }), [selectedOptions])

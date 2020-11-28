@@ -4,15 +4,12 @@
   border: none;
   color: white;
   transition: .3s;
-  transform: scale(.95);
   height: 50px;
   padding-left: 10px;
   padding-right: 10px;
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1);
-  }
+  cursor: pointer;
+  position: relative;
+  outline: none;
 
   &:active {
     background-color: rgb(31, 22, 161);
@@ -28,7 +25,7 @@
     bottom: 0;
     left: 0;
     content: "";
-    z-index: 1000;
+    z-index: 10;
   }
 
   &:disabled {
