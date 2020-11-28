@@ -33,6 +33,12 @@ $breakpoint-tablet: 768px;
           border: none;
         }
       }
+
+      .back-button {
+        width: 30px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -78,6 +84,10 @@ $breakpoint-tablet: 768px;
         .action {
           height: 35px;
           margin-top: 5px;
+        }
+
+        .back-button {
+          margin-bottom: 0px;
         }
       }
     }
